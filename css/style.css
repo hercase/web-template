@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.header{
+    text-align: left;
+    padding: 5px 5px;
+    display: flex;
+}
+
+.logo {
+flex: 1;
+}
+
+.menu{
+    flex: 1;
+    border-radius: 10px;
+    padding: 3px;
+    /* margin-left: 70%; */
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(209, 33, 33);
+}
+
+/* .menu {
+    margin-top: 15px;
+    padding: 5px 5px;
+    text-align: right;
+} */
+.menu li {
+        list-style-type: none;
+        padding: 5px 15px;
+        font: bold 14px verdana;
+        display: inline-block;
+    }
+
+.menu li:hover {
+    background-color: rgb(221, 83, 83);
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.divisor {
+    border: solid 2px #91a3a1;
+}
+
+.leyenda{
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    border: solid 5 px rgb(0, 0, 0 , .25);
+    padding-top: 5px;
+    max-width: 90% 20%;
+    margin-left: auto auto;
+}
+.imagen-carrusel{
+    background-color: rgb(45, 46, 45);
+    width: 960px;
+    height: 350px;
+    text-align: center;
+    color: white;
+    margin: 20px auto;
+}
+.compo{
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: left;
+}
+.sub{
+    font-size: 15px;
+    text-align: left;
+    padding: 5px 5px;
+}
+h2 {
+    font: bold 16px;
+    sans-serif;
+}
