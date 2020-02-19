@@ -161,14 +161,11 @@ body {
     align-content: space-around 1px;
 }
 .imagen1{
-    margin: auto;
     flex: 1 1;
 }
 .imagen2{
-    margin: auto;
     flex: 1 1;
 }
 .imagen3{
-    margin: auto;
     flex: 1 1;
 }
