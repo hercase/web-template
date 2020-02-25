@@ -6,44 +6,45 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    width: 95%;
     margin: auto;
 }
 
-.contenedor {
-    max-width: 1000px;
-    margin: auto;
-}
-
-.header {
-    margin: auto;
-    max-width: 1000px;
-    text-align: left;
-    padding: 5px 5px;
+header {
+    padding: 20px 0;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #91a3a1;
 }
 
 .logo {
-    flex: 1;
+    padding-left: 20px;
 }
 
 .menu {
-    flex: 1;
     padding: 3px;
 }
 
 .menu ul {
     border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
     background-color:rgb(221, 38, 38);
-
+    display: flex;
+    align-items: center;
 }
 
 .menu li {
     list-style-type: none;
-    padding: 5px 15px;
-    font: bold 14px verdana;
+    padding: 10px 15px;
     display: inline-block;
+    flex-grow: 1;
+    text-align: center  ;
 }
 
 .menu li:hover {
@@ -52,46 +53,44 @@ body {
 }
 
 .menu a {
-    text-decoration: none;
+    text-decoration: none;  
+    font-size: .8em;
     color: white;
     text-transform: uppercase;
-    font-size: 10px;
 }
 
-.cajadiv {
-    margin: 10px;
-    padding: 20px;
+/* El divisor se puede hacer con 3 elementos que junto a la propiedad FLEX en el padre, se alinean como un unico elemento */
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
 }
 
-.divisor {
-    border: solid 1px #91a3a1;
+.divider hr {
+    flex-grow: 1;
 }
 
-.divisor-serv {
+.divider .msg {
     text-transform: uppercase;
-    top: -18px;
-    position: relative;
-    margin: auto ;
-    text-align: center;
-    width: fit-content;
     padding: 5px 30px;
     border-radius: 50px;
     color: white;
-    background-color:rgb(221, 38, 38);
-
-    border: solid 2px #91a3a1;
-    box-shadow: inset 0px 0px 6px 1px black;
+    background-color: rgb(221, 38, 38);
 }
 
 .leyenda {
-    max-width: 800px;
-    padding: 10px 10px;
-    margin: 3em 3em;
-    color: gray;
-    font-size: smaller;
-    font-family: cursive;
+    margin: 2em;
+    color: #808080;
+    font-size: 1em;
     text-align: center;
-    border: solid 5 px rgb(0, 0, 0, .25);
+    font-style: italic;
+}
+
+/* Insertamos un caracter o texto antes y despues del elemento */
+
+.leyenda:before, .leyenda:after {
+    content: '"';
 }
 
 .imagen-carrusel {
@@ -141,36 +140,42 @@ body {
 
 
 .box {
-    color: gray;
-
-    text-align: left;
-    height: fit-content;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Arial, sans-serif;
     display: flex;
-    flex: auto;
-    margin: 10px auto;
-    align-content: space-around 1px;
 }
 
-.box img {
-    width: 30px;
+.card {
+    padding: 1em;
+}
+
+.card img {
     height: 30px;
-    justify-items: stretch;
-    margin-top: 5px;
+    padding-right: 1em;
 }
 
-.box h4 {
-    text-indent: 60px;
-    text-align: left;
-    margin-top: -29px;
+.card .card-title {
+    color: rgb(100, 100, 100);
+    display: flex;
+    margin-bottom: .8em;
+    font-weight: bold;
 }
 
-.one a,
-.two a,
-.three a {
+.card .card-body p {
+    color: gray;
+    font-size: .9em;
+    margin-bottom: .8em;
+}
+
+
+.card a {
     text-decoration: none;
-    color:red;
+    font-size: .8em;
+    color: #dd3a37;
+    text-transform: uppercase;
+}
 
+.card a::after{
+    content: '»';
 }
 
 .caritas {
@@ -188,31 +193,28 @@ body {
 }
 
 .cara img {
-    width: 120px;
+    width: 80%;
 }
 
 .cara b {
     font-style: oblique;
 }
 
-.cara>a {
-    text-decoration: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: small;
-    width: fit-content;
-    padding: 5px 5px;
-    border-radius: 50px;
-    color: white;
-    background-color:rgb(221, 38, 38);
-    red;
-    border: solid 2px #91a3a1;
-    box-shadow: inset 0px 0px 6px 1px black;
+.cara p {
+    padding: 10px;
 }
 
-.cara>a:hover {
-    border-radius: 50px;
-    background-color: rgb(90, 30, 30);
+.cara a {
+    text-decoration: none;
+    font-size: .8em;
+    color: #dd3a37;
+    text-transform: uppercase;
 }
+
+.cara a::after{
+    content: '»';
+}
+
 
 .galerybox {
     margin:  auto;
@@ -237,13 +239,14 @@ body {
 
 .copyright {
     margin: auto;
-    background-color: #ddddddfb;
-    text-align: left;
     max-width: 1000px;
-    font-size: small;
+    height: 50px;
     font-family: 'Courier New', Courier, monospace;
     color: gray;
-    text-shadow: gray;
+    font-size: .8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contenedorf {
@@ -257,10 +260,12 @@ body {
 
 .details{
 list-style-type: none;
+flex: 1;
 }
 
 .details li {
     color: gray;
+    font-size: 14px;
 }
 
 .details h4 {
@@ -271,7 +276,7 @@ list-style-type: none;
 .lastblog {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    flex: 2;
 }
 
 .lastblog h3 {
@@ -289,63 +294,48 @@ list-style-type: none;
     font-family: sans-serif;
 }
 
-.contenedors .form {
-    width: auto;
-    max-height: 400px;
-    max-width: 300px;
-    margin: 5px auto;
-    padding: 5px 50px;
-    border-radius: 3px;
-}
-
-.contenedors .form .form-input .form-textarea {
-    height: 400px;
-    border-bottom: 2px solid rgb(221, 38, 38);
-    border-radius: 20px;
-    max-height: 400px;
-}
-
 .contenedors {
-    margin-top: -20px;
-    text-align: center;
-    max-width: 450px;
-    padding: 15px;
+    flex: 1;
 }
 
-.contenedors .form .form-textarea {
-    resize: vertical;
-    max-height: 150px;
-    min-height: 50px;
+.contenedors h3 {
+    margin-bottom: 10px;
+}
+
+.contenedors .form {
+    display: flex;
+    flex-direction: column;
 }
 
 .contenedors .form .btn-submit {
-    font-family: sans-serif;
-    font-size: small;
-    width: fit-content;
-    padding: 5px 5px;
-    border-radius: 50px;
+    padding: 10px;
+    border-radius: 10px;
     color: white;
-    background-color:rgb(221, 38, 38);
-    ;
-    border: solid 2px #91a3a1;
-    box-shadow: inset 0px 0px 5px 1px black;
+    background-color: rgb(221, 38, 38);
+    border: none;
+    width: 30%;
 }
 
-.contenedors .form .btn-submit:hover {
-    border-radius: 50px;
+.contenedors .form .btn-submit:hover {  
     background-color: rgb(90, 30, 30);
 }
 
-.form-input {
-    width: 200px;
+/* El atributo Resize es necesario para no romper el estilo al cambiar el tamaño del textarea */
+.contenedors input, 
+.contenedors textarea {
     padding: 5px;
+    margin-bottom: 10px;
+    resize: none;
+    border-radius: 5px;
+    border: none;
 }
 
 .post1, .post2 {
     display: flex;
-    justify-content: flex-start;
     padding-bottom: 10px;
+    padding-right: 20px;    
 }
+
 
 .cajita img {
     padding: 2px;
@@ -357,6 +347,11 @@ list-style-type: none;
 .lastblog a,.b {
     text-decoration: none;
     color:rgb(221, 38, 38);
+}
+
+.nompost {
+    display: flex;
+    flex-direction: column;
 }
 
 .nompost span {
