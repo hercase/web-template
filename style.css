@@ -190,6 +190,11 @@ header {
     font-size: smaller;
     text-align: center;
     margin: 10px;
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #eee;
+    border-radius: .25rem;
 }
 
 .cara img {
@@ -271,6 +276,11 @@ flex: 1;
 .details h4 {
     font-size: medium;
     color: gray;
+}
+
+.details a {
+    text-decoration: none;
+    color: red;
 }
 
 .lastblog {
@@ -358,3 +368,4 @@ flex: 1;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: gray;
 }
+
